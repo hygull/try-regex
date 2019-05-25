@@ -2,7 +2,7 @@
 
 A repository to work on regular expressions of different programming languages(basically Python, JavaScript, Golang etc.), trying different samples as per the need based on different requirements. 
 
-![Relative date](https://img.shields.io/date/1558767003.svg) | ![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/hygull.svg?style=social) | ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg)
+![Relative date](https://img.shields.io/date/1558767003.svg) &nbsp; ![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/hygull.svg?style=social) &nbsp; ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg)
 
 > You can also visit https://hygull.github.io/try-regex/ to see colored beautiful documentation of this same age.
 
@@ -16,6 +16,8 @@ A repository to work on regular expressions of different programming languages(b
 
 ## List of functions/methods used in examples presented below
 
++ Basic functions/methods
+
 1. **sub()**
 
 2. **compile()**
@@ -23,6 +25,19 @@ A repository to work on regular expressions of different programming languages(b
 3. **findall()** - a method defined on pattern object. For more details, [check this](./docs/inspect_history/compile.md).
 
 4. **match()**
+
+5. **finditer()** - a method which returns an iterator
+
++ Other functions/methods
+
+1. **start()** - a method defined on match object
+
+2. **end()** -  a method defined on match object
+
+3. **span()** -  a method defined on match object
+
+
+
 
 <h2 id="python-regex">Getting started - Python's regular expressions</h2>
 
