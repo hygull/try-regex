@@ -10,6 +10,17 @@ A repository to work on regular expressions of different programming languages(b
 
 + [Getting started - JavaScript's regular expressions](#js-regex)
 
+
+## List of functions/methods used in examples presented below
+
+1. **sub()**
+
+2. **compile()**
+
+3. **findall()** - a method defined on pattern object. For more details, [check this](./docs/inspect_history/compile.md).
+
+4. **match()**
+
 <h2 id="python-regex">Getting started - Python's regular expressions</h2>
 
 + Open **Python3** terminal and list out all the packages of **re** module.
@@ -107,6 +118,21 @@ template
 >>> 
 ```
 
++ Retrieving all integers from text - Using **compile()** method & **findall()** function
+
+```python
+>>> text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+>>> 
+>>> p = re.compile(r"\d+")
+>>> 
+>>> p.findall(text)
+['2', '8', '100', '200', '90']
+>>> 
+>>> nums = [int(num) for num in  p.findall(text)]
+>>> nums
+[2, 8, 100, 200, 90]
+>>> 
+```
 
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
