@@ -2,10 +2,11 @@
 
 A repository to work on regular expressions of different programming languages(basically Python, JavaScript, Golang etc.), trying different samples as per the need based on different requirements. 
 
-![Relative date](https://img.shields.io/date/1558767003.svg) &nbsp; ![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/hygull.svg?style=social) &nbsp; ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg)
+![Relative date](https://img.shields.io/date/1558767003.svg) ![Twitter Follow](https://img.shields.io/twitter/follow/hygull.svg?color=blue&logo=Rishikesh&logoColor=green&style=social)![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg) ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg?color=green&label=try-regex%20%28LICENSE%29&logo=Rishikesh&logoColor=red)
 
 > You can also visit https://hygull.github.io/try-regex/ to see colored beautiful documentation of this same age.
-
+>
+> **Note:** Here you can find examples from too simple to advanced as the purpose of this repository is to learn and earn knowledge step by step. So, please don't think too much if somewhere I expanded 1 line code to 2 or more.
 
 ## Contents
 
@@ -234,7 +235,7 @@ Let's use above in better way.
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
-+ Retrieving all integers from text
++ Retrieving all integers from text (Use of split(), shift(), pop(), map() methods)
 
 ```javascript
 ➜  try-regex git:(master) ✗ node                     
@@ -280,7 +281,25 @@ undefined
 
 ![Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
 
++ Retrieving integers from text (Use of split(), trim(), replace(), map() methods)
 
+```javascript
+> let text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+undefined
+> 
+> text.replace(/\D+/g, ' ')
+' 2 8 100 200 90 '
+> 
+> text.replace(/\D+/g, ' ').trim() 
+'2 8 100 200 90'
+> 
+> text.replace(/\D+/g, ' ').trim().split(' ')
+[ '2', '8', '100', '200', '90' ]
+> 
+> text.replace(/\D+/g, ' ').trim().split(' ').map((num) => Number.parseInt(num))
+[ 2, 8, 100, 200, 90 ]
+> 
+```
 
 ## Python references
 
