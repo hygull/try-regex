@@ -72,7 +72,44 @@ template
 >>> 
 ```
 
-<h2 id="js-regex">Getting started - Node's regular expressions</h2>
++ Retrieving all integers from text - Using **sub()** (replacement) function
+
+```python
+>>> import re
+>>> 
+>>> text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+>>> nums = re.sub(r"\D+", '', text)
+>>> nums
+'2810020090'
+>>> 
+>>> nums = re.sub(r"\D+", ' ', text)  # PERFECT
+>>> nums
+' 2 8 100 200 90 '
+>>> 
+>>> nums = nums.strip()  # REMOVE spaces around
+>>> nums
+'2 8 100 200 90'
+>>> 
+>>> nums = nums.split()
+>>> nums
+['2', '8', '100', '200', '90']
+>>> 
+>>> nums = map(int, nums)
+>>> nums
+<map object at 0x103a45160>
+>>> 
+>>> nums = list(nums)
+>>> nums
+[2, 8, 100, 200, 90]
+>>> 
+>>> sum(nums) # SUM OF INTEGERS
+400
+>>> 
+```
+
+
+<!-- Node/JavaScript PART-->
+<h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
 + Retrieving all integers from text
 
@@ -118,7 +155,7 @@ undefined
 
 > Attached screenshot
 
-[Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
+![Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
 
 
 
