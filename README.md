@@ -14,7 +14,7 @@ A repository to work on regular expressions of different programming languages(b
 
 + Open **Python3** terminal and list out all the packages of **re** module.
 
-```python
+```bash
 Python 3.6.7 (v3.6.7:6ec5cf24b7, Oct 20 2018, 03:02:14) 
 [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
@@ -74,7 +74,63 @@ template
 
 <h2 id="js-regex">Getting started - Node's regular expressions</h2>
 
++ Retrieving all integers from text
 
-## References
+```javascript
+➜  try-regex git:(master) ✗ node                     
+> 
+> let text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+undefined
+> 
+> let nums = text.split(/\D+/g)
+undefined
+> 
+> nums
+[ '', '2', '8', '100', '200', '90', '' ]
+> 
+> if(nums.length) {
+...     if(!nums[0]) 
+...         nums.shift()  // Remove first item from nums i.e. ''  
+... 
+... }
+''
+> 
+> nums
+[ '2', '8', '100', '200', '90', '' ]
+> 
+> if(nums.length) {
+...     if(!nums[nums.length - 1]) 
+...         nums.pop()  // Remove last item from nums i.e. ''  
+... }
+''
+> nums
+[ '2', '8', '100', '200', '90' ]
+> 
+> // Converting to integers (using map() method)
+undefined
+> nums = nums.map((num) => Number.parseInt(num))
+[ 2, 8, 100, 200, 90 ]
+> 
+> nums
+[ 2, 8, 100, 200, 90 ]
+> 
+```
 
-+ https://www.tutorialspoint.com/python3/python_reg_expressions.htm
+> Attached screenshot
+
+[Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
+
+
+
+## Python references
+
++ [https://www.tutorialspoint.com/python3/python_reg_expressions.htm](https://www.tutorialspoint.com/python3/python_reg_expressions.htm)
+
++ [https://docs.python.org/3/howto/regex.html](https://docs.python.org/3/howto/regex.html)
+
+## JavaScript references
+
++ [https://www.w3schools.com/jsref/jsref_shift.asp](https://www.w3schools.com/jsref/jsref_shift.asp)
+
++ [https://www.w3schools.com/jsref/jsref_pop.asp](https://www.w3schools.com/jsref/jsref_pop.asp)
+
