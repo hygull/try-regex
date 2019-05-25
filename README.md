@@ -2,11 +2,10 @@
 
 A repository to work on regular expressions of different programming languages(basically Python, JavaScript, Golang etc.), trying different samples as per the need based on different requirements. 
 
-Started on &raquo; ![Relative date](https://img.shields.io/date/1558767003.svg)
+![Relative date](https://img.shields.io/date/1558767003.svg) | ![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/hygull.svg?style=social) | ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg)
 
 > You can also visit https://hygull.github.io/try-regex/ to see colored beautiful documentation of this same age.
 
-<%= octicon "info" %>
 
 ## Contents
 
