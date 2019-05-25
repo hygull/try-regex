@@ -118,7 +118,7 @@ template
 >>> 
 ```
 
-+ Retrieving all integers from text - Using **compile()** method & **findall()** function
++ Retrieving all integers from text - Using **compile()** function & **findall()** method
 
 ```python
 >>> text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
@@ -129,6 +129,85 @@ template
 ['2', '8', '100', '200', '90']
 >>> 
 >>> nums = [int(num) for num in  p.findall(text)]
+>>> nums
+[2, 8, 100, 200, 90]
+>>> 
+```
+
++ Retrieving all integers from text - Using **compile()** function & **finditer()** method
+
+```python
+>>> text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+>>> 
+>>> p = re.compile(r"\d+")
+>>> 
+>>> iterator = p.finditer(text)
+>>> 
+>>> match1 = iterator.__next__()
+>>> match1.span()
+(6, 7)
+>>> text[6: 7]
+'2'
+>>> 
+>>> match2 = iterator.__next__()
+>>> match2.span()
+(24, 25)
+>>> text[24: 25]
+'8'
+>>> 
+>>> match3 = iterator.__next__()
+>>> match3.span()
+(40, 43)
+>>>
+>>> text[40: 43]
+'100'
+>>> 
+>>> match4 = iterator.__next__()
+>>> match4.span()
+(59, 62)
+>>> text[59: 62]
+'200'
+>>> 
+>>> match5 = iterator.__next__()
+>>> match5.span()
+(69, 71)
+>>> text[69: 71]
+'90'
+>>> 
+>>> match6 = iterator.__next__()  # Exception
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+>>> 
+```
+
+```python
+>>> match1.start()
+6
+>>> match1.end()
+7
+>>> match2.end()
+25
+>>> match2.start()
+24
+>>> 
+```
+
+Let's use above in better way.
+
+```python
+>>> text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
+>>> 
+>>> p = re.compile(r"\d+")
+>>> 
+>>> iterator = p.finditer(text)
+>>> 
+>>> nums = []
+>>> 
+>>> for match in iterator:
+...     start, end = match.start(), match.end()
+...     nums.append(int(text[start: end]))
+... 
 >>> nums
 [2, 8, 100, 200, 90]
 >>> 
