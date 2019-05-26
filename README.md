@@ -232,6 +232,29 @@ Let's use above in better way.
 >>> 
 ```
 
++ Removing multiple underscores to get Python like variable names
+
+```python
+>>> import re
+>>> 
+>>> text = "full____name_"
+>>> output = re.sub(r"_+", '_', text.strip("_")).lower()
+>>> output
+'full_name'
+>>> 
+>>> text = "___is__to__old___"
+>>> output = re.sub(r"_+", '_', text.strip("_")).lower()
+>>> output
+'is_to_old'
+>>> 
+>>> text = "___iS__Too__OLD"
+>>> output = re.sub(r"_+", '_', text.strip("_")).lower()
+>>> output
+'is_too_old'
+>>> 
+```
+
+
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
