@@ -258,7 +258,7 @@ Let's use above in better way.
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
-+ Retrieving all integers from text (Use of `split()`, `shift()`, `pop()`, `map()` methods)
++ Retrieving all integers from text (use of `split()`, `shift()`, `pop()`, `map()` methods)
 
 ```javascript
 ➜  try-regex git:(master) ✗ node                     
@@ -304,7 +304,7 @@ undefined
 
 ![Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
 
-+ Retrieving integers from text (Use of `split()`, `trim()`, `replace()`, `map()` methods)
++ Retrieving integers from text (use of `split()`, `trim()`, `replace()`, `map()` methods)
 
 ```javascript
 > let text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
