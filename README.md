@@ -4,7 +4,7 @@ A repository to work on regular expressions of different programming languages(b
 
 ![Relative date](https://img.shields.io/date/1558767003.svg) ![Twitter Follow](https://img.shields.io/twitter/follow/hygull.svg?color=blue&logo=Rishikesh&logoColor=green&style=social)![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg) ![Cocoapods](https://img.shields.io/cocoapods/l/AFNetworking.svg?color=green&label=try-regex%20%28LICENSE%29&logo=Rishikesh&logoColor=red)
 
-> You can also visit https://hygull.github.io/try-regex/ to see colored beautiful documentation of this same age.
+> You can also visit [https://hygull.github.io/try-regex/](https://hygull.github.io/try-regex/) to see colored beautiful documentation of this same age.
 >
 > **Note:** Here you can find examples from too simple to advanced as the purpose of this repository is to learn and earn knowledge step by step. So, please don't think too much if somewhere I expanded 1 line code to 2 or more.
 
@@ -15,9 +15,9 @@ A repository to work on regular expressions of different programming languages(b
 + [Getting started - JavaScript's regular expressions](#js-regex)
 
 
-## List of functions/methods used in examples presented below
+## Python - List of functions/methods used in examples presented below
 
-+ Basic functions/methods
+> Basic functions/methods
 
 1. **sub()**
 
@@ -29,7 +29,7 @@ A repository to work on regular expressions of different programming languages(b
 
 5. **finditer()** - a method which returns an iterator
 
-+ Other functions/methods
+> Other functions/methods
 
 1. **start()** - a method defined on match object
 
@@ -235,7 +235,7 @@ Let's use above in better way.
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
-+ Retrieving all integers from text (Use of split(), shift(), pop(), map() methods)
++ Retrieving all integers from text (Use of `split()`, `shift()`, `pop()`, `map()` methods)
 
 ```javascript
 ➜  try-regex git:(master) ✗ node                     
@@ -281,7 +281,7 @@ undefined
 
 ![Node-RegexScreenShot-2019-05-25-12.57.16-PM.png](./images/Node-RegexScreenShot-2019-05-25-12.57.16-PM.png)
 
-+ Retrieving integers from text (Use of split(), trim(), replace(), map() methods)
++ Retrieving integers from text (Use of `split()`, `trim()`, `replace()`, `map()` methods)
 
 ```javascript
 > let text = "These 2 days, I will do 8 imp tasks for 100 years to make $200 using 90 techniques."
@@ -313,3 +313,4 @@ undefined
 
 + [https://www.w3schools.com/jsref/jsref_pop.asp](https://www.w3schools.com/jsref/jsref_pop.asp)
 
++ [https://www.w3schools.com/jsref/jsref_obj_regexp.asp](https://www.w3schools.com/jsref/jsref_obj_regexp.asp)
