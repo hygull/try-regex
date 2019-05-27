@@ -254,6 +254,27 @@ Let's use above in better way.
 >>> 
 ```
 
++ Showing only words from any sentence (removing all numbers, limiting 2+ spaces to 1)
+
+```python
+>>> import re
+>>> 
+>>> text = "12 coins were on 5 tables for 7 days."
+>>> 
+>>> arr = re.split(r"\d+", text)
+>>> arr
+['', ' coins were on ', ' tables for ', ' days.']
+>>> 
+>>> ''.join(arr)
+' coins were on  tables for  days.'
+>>> 
+>>> ''.join(arr).strip()
+'coins were on  tables for  days.'
+>>> 
+>>> re.sub(r'\s+', ' ', ''.join(arr).strip())
+'coins were on tables for days.'
+>>> 
+```
 
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
