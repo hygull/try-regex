@@ -38,7 +38,23 @@ def camel2uscore(text, allow_spaces=False):
             # >>> output
             # 'is_to_old'
             # >>>
-            output = re.sub(r"_+", '_', text.strip("_")).lower()
+            # >>> 
+            # >>> text = "Python_____is__really___great__for__all__"
+            # >>> 
+            # >>> output = re.sub(r"_+", '_', text.strip("_")).lower()
+            # >>> output
+            # 'python_is_really_great_for_all'
+            # >>> 
+            # >>> output2 = re.sub(r"_{2,}", '_', text.strip("_")).lower()
+            # >>> output2
+            # 'python_is_really_great_for_all'
+            # >>> 
+            # >>> output3 = re.sub(r"_{3,}", '_', text.strip("_")).lower()
+            # >>> output3
+            # 'python_is__really_great__for__all'
+            # >>> 
+            # >>> 
+            output = re.sub(r"_{2,}", '_', text.strip("_")).lower()
     else:
         # is-too-old, is too old
         pass

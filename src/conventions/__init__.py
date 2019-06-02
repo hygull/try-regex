@@ -1,1 +1,1 @@
-from camel2score import camel2score
+from .camel2uscore import camel2uscore
