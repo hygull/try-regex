@@ -21,7 +21,7 @@ def camel2uscore(text, allow_spaces=False):
     """
     output = ""
 
-    if text.isalnum():
+    if text.isidentifier():
         # Name, name, myName, isTooOld, is__Too___old
         if text.find('_') == -1:
             output = text.lower()
