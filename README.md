@@ -297,6 +297,37 @@ Let's use above in better way.
 >>> 
 ```
 
++ A simple camel case conversion to underscored case
+
+```python
+>>> import re
+>>> 
+>>> text = "MyFullName"
+>>> 
+>>> p = re.compile("[A-Z]")
+>>>
+>>> iterator = p.finditer(text)
+>>> i = 0
+>>> output = ''
+>>> for match in iterator:
+...     if i == 0:
+...         start, end = match.start(), match.end()
+...     else:
+...         start2, end2 = match.start(), match.end()
+...         output += text[start: start2].lower() + ":"
+...         start = start2
+...     i += 1
+... else:
+...     output += text[start2:].lower()
+... 
+>>> output
+'my:full:name'
+>>> 
+>>> re.sub(r':', '_', output)
+'my_full_name'
+>>> 
+```
+
 <!-- Node/JavaScript PART-->
 <h2 id="js-regex">Getting started - JavaScript's regular expressions</h2>
 
